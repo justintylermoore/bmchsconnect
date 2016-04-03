@@ -1,5 +1,5 @@
 <ion-view>
-    <ion-nav-title ng-bind-html="::pageCtrl.item.title.rendered"></ion-nav-title>
+  <ion-nav-title><img src="img/menu-logo.png" style=" margin-top:5px; " height="50px" /></ion-nav-title>
     <ion-content>
         <wphc-loader ng-if="!pageCtrl.item" on-load="pageCtrl.init()"></wphc-loader>
         <ion-refresher pulling-text="{{ 'pullToRefresh' | translate}}" on-refresh="pageCtrl.refresh()"></ion-refresher>

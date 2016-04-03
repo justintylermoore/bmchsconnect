@@ -7,9 +7,9 @@
     <!-- <wphc-author add-link author="::pageCtrl.page._embedded.author[0]" date="::pageCtrl.page.date"></wphc-author> -->
     <div class="post-content" ng-if="::pageCtrl.page.excerpt" bind-and-compile-html="::(pageCtrl.page.content.rendered | prepLink | highlight)"></div>
 
-    <!-- <div class="item item-divider item-toolbar">
+    <div class="item item-divider item-toolbar">
         <wphc-post-toolbar post="::pageCtrl.page" show-share show-bookmark></wphc-post-toolbar>
-    </div> -->
+    </div>
     <section class="footer">
         <a class="button button-positive button-open-browser" wphc-href href="{{::pageCtrl.page.link}}">
             {{'post.openInBrowser' | translate}}

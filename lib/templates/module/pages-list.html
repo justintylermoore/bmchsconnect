@@ -1,5 +1,5 @@
 <ion-view>
-    <ion-nav-title>{{ pagesCtrl.title | translate}}</ion-nav-title>
+    <ion-nav-title><img src="img/menu-logo.png" style=" margin-top:5px; " height="50px" /></ion-nav-title>
     <ion-content class="padding bg-gray-lighter">
         <wphc-empty-list list="pagesCtrl.list"></wphc-empty-list>
         <wphc-loader ng-if="!pagesCtrl.list" on-load="pagesCtrl.init()"></wphc-loader>

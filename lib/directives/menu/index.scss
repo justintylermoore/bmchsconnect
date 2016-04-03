@@ -1,7 +1,7 @@
 @mixin item($color, $amount) {
     > .item {
         background-color: $color;
-        border-color: darken($color, $amount + 7%);
+        border-color: #444444;
         i.icon {
             color: darken($menu-icon-color, $amount + 2%);
         }

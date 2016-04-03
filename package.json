@@ -1,16 +1,16 @@
 {
-  "name": "bmchsconnect",
-  "version": "1.0.1",
-  "title": "BMCHS Connect",
-  "description": "Stay up-to-date with all things Irish!",
+  "name": "wordpress-hybrid-client",
+  "version": "2.0.0-beta08",
+  "title": "wordpress-hybrid-client",
+  "description": "AngularJS client using Ionic Framework and based on the json-rest-api plugin: https://wordpress.org/plugins/json-rest-api/ with CORS enabled.",
   "main": "index.js",
   "scripts": {
     "build": "bash ./release.sh",
     "restore": "ionic state restore",
-    "installWPBMCHS": "cd scripts && node ./install.js",
+    "installWPHC": "cd scripts && node ./install.js",
     "increaseVersion": "cd scripts && node ./increaseVersion.js",
-    "devserver": "webpack-dev-server --port 8080 --json --open",
-    "dumpdev": "rm -rf www/* && webpack --progress --colors -d --display-reasons --display-error-details --display-modules",
+    "devserver": "webpack-dev-server --port 8080 --json --progress",
+    "dumpdev": "rm -rf www/* && webpack --progress --colors -d",
     "dumpprod": "rm -rf www/* && webpack --progress --colors --config webpack.config.prod.js -p",
     "android": "npm run dumpdev && cordova run android",
     "iosEmulator": "npm run dumpdev && cordova run ios",
@@ -31,16 +31,16 @@
     "material design",
     "client"
   ],
-  "author": "JTM <jmoore@bmchs.org>",
+  "author": "Julien Renaux <contact@julienrenaux.fr>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justintylermoore/bmchsconnect"
+    "url": "https://github.com/shprink/wordpress-hybrid-client"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/justintylermoore/bmchsconnect/issues"
+    "url": "https://github.com/shprink/wordpress-hybrid-client/issues"
   },
-  "homepage": "http://justintylermoore.github.io/bmchsconnect",
+  "homepage": "https://github.com/shprink/wordpress-hybrid-client",
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel": "^5.8.23",
