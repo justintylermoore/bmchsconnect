@@ -1,0 +1,10 @@
+<ion-view>
+    <ion-nav-title>{{ postsCtrl.title | translate}}</ion-nav-title>
+    <ion-content class="padding bg-gray-lighter">
+        <WPBMCHS-empty-list list="postsCtrl.list"></WPBMCHS-empty-list>
+        <WPBMCHS-loader ng-if="!postsCtrl.list" on-load="postsCtrl.init()"></WPBMCHS-loader>
+        <ion-refresher pulling-text="{{ 'pullToRefresh' | translate}}" on-refresh="postsCtrl.refresh()"></ion-refresher>
+        <WPBMCHS-posts show-author posts="postsCtrl.list"></WPBMCHS-posts>
+        <ion-infinite-scroll immediate-check="true" ng-if="postsCtrl.list && !postsCtrl.isPaginationOver" on-infinite="postsCtrl.loadMore()" distance="1%">test</ion-infinite-scroll>
+    </ion-content>
+</ion-view>

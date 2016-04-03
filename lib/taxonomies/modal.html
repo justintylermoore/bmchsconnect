@@ -1,0 +1,11 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">{{ taxonomies.title | translate}}</h1>
+        <button class="button button-clear" ng-click="modal.hide()"><i class="icon ion-close-round"></i>
+        </button>
+    </ion-header-bar>
+    <ion-content>
+        <WPBMCHS-loader ng-if="!taxonomies.list.length"></WPBMCHS-loader>
+        <WPBMCHS-taxonomies taxonomies="taxonomies.list" on-click="modal.hide()" term="taxonomies.term" post-type="taxonomies.type"></WPBMCHS-taxonomies>
+    </ion-content>
+</ion-modal-view>

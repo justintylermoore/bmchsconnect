@@ -1,0 +1,19 @@
+<div class="post padding">
+    <div class="item item-image" ng-if="::postCtrl.post.featured_media != 0" WPBMCHS-img-background-cache="{{::postCtrl.featured_image}}"></div>
+    <h1 class="item-title item-title-without-image" ng-bind-html="::postCtrl.post.title.rendered"></h1>
+    <WPBMCHS-author add-link author="::postCtrl.post._embedded.author[0]" date="::postCtrl.post.date"></WPBMCHS-author>
+    <div class="item item-divider item-toolbar">
+        <WPBMCHS-post-toolbar post="::postCtrl.post" show-share show-bookmark></WPBMCHS-post-toolbar>
+    </div>
+    <div class="post-content" bind-and-compile-html="::(postCtrl.post.content.rendered | prepLink | highlight)"></div>
+
+    <div class="item item-divider item-toolbar">
+        <WPBMCHS-post-toolbar post="::postCtrl.post" show-share show-bookmark></WPBMCHS-post-toolbar>
+    </div>
+    <WPBMCHS-comments post-id="{{::postCtrl.post.id}}" ng-if="::postCtrl.enabled"></WPBMCHS-comments>
+    <section class="footer">
+        <a class="button button-positive button-open-browser" WPBMCHS-href href="{{::postCtrl.post.link}}">
+            {{'post.openInBrowser' | translate}}
+        </a>
+    </section>
+</div>

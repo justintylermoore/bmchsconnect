@@ -1,0 +1,5 @@
+WPBMCHS-pages {
+    .card {
+        @include post-item("../img/post-img-border.png");
+    }
+}

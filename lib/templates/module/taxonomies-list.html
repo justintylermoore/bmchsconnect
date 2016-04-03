@@ -1,0 +1,10 @@
+<ion-view>
+    <ion-nav-title>{{ taxonomiesCtrl.title | translate}}</ion-nav-title>
+    <ion-content>
+        <WPBMCHS-empty-list list="taxonomiesCtrl.list"></WPBMCHS-empty-list>
+        <WPBMCHS-loader ng-if="!taxonomiesCtrl.list" on-load="taxonomiesCtrl.init()"></WPBMCHS-loader>
+        <ion-refresher pulling-text="{{ 'pullToRefresh' | translate}}" on-refresh="taxonomiesCtrl.refresh()"></ion-refresher>
+        <WPBMCHS-taxonomies taxonomies="taxonomiesCtrl.list" term="taxonomiesCtrl.term" post-type="taxonomiesCtrl.postType"></WPBMCHS-taxonomies>
+        <ion-infinite-scroll immediate-check="true" ng-if="taxonomiesCtrl.list && !taxonomiesCtrl.isPaginationOver" on-infinite="taxonomiesCtrl.loadMore()" distance="1%">test</ion-infinite-scroll>
+    </ion-content>
+</ion-view>
