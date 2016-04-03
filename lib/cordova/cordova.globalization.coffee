@@ -1,5 +1,5 @@
-module.exports = angular.module 'wpbmchs.cordova'
-    .run ($log, $WPBMCHSConfig, $ionicPlatform, $cordovaGlobalization, $WPBMCHSLanguage) ->
+module.exports = angular.module 'wordpress-hybrid-client.cordova'
+    .run ($log, $WPHCConfig, $ionicPlatform, $cordovaGlobalization, $WPHCLanguage) ->
         $log.info 'cordova globalization information'
 
         $ionicPlatform.ready () ->
@@ -7,7 +7,7 @@ module.exports = angular.module 'wpbmchs.cordova'
             .then (locale) ->
                 locale = locale.value.substring 0, 2
 
-                if $WPBMCHSLanguage.hasLocale()
-                    $WPBMCHSLanguage.setLocale $WPBMCHSLanguage.getLocale()
+                if $WPHCLanguage.hasLocale()
+                    $WPHCLanguage.setLocale $WPHCLanguage.getLocale()
                 else
-                    $WPBMCHSLanguage.setLocale locale
+                    $WPHCLanguage.setLocale locale

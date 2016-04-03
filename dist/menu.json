@@ -1,240 +1,135 @@
-[
-   {
-      "type":"internal",
-      "trans":"menu.home",
-      "route":"public.posts",
-      "icon":"icon ion-home"
-   },
-   {
-      "type":"separator",
-      "trans":"Campus Publications"
-   },
-   {
-      "type":"internal",
-      "trans":"Campus Ministry Blog",
-      "route":"public.taxonomies.slug({ term: 'category', slug: 'campus-ministry-blog', postType: 'post' })",
-      "icon":"ion-ios-bookmarks"
-
-   },
-   {
-      "type":"internal",
-      "trans":"Irish Eyes",
-      "route":"public.taxonomies.slug({ term: 'category', slug: 'irish-eyes', postType: 'post' })",
-      "icon":"ion-ios-paper-outline"
-   },
-   {
-      "type":"internal",
-      "trans":"Chi Rhoan",
-      "route":"public.pages.id({ id: 2321 })",
-      "icon":"ion-document-text"
-   },
-   {
-      "type":"separator",
-      "trans":"Student Portal"
-   },
-   {
-      "type":"external",
-      "trans":"Gmail",
-      "href":"gmail://http://mail.google.com",
-      "icon":"ion-ios-email"
-   },
-   {
-      "type":"external",
-      "trans":"PowerSchool",
-      "href":"http://powerschool.bmchs.org",
-      "icon":"ion-university"
-   },
-   {
-      "type":"external",
-      "trans":"Classroom",
-      "href":"http://classroom.google.com/",
-      "icon":"ion-erlenmeyer-flask"
-   },
-   {
-      "type":"external",
-      "trans":"Google Drive",
-      "href":"googledrive://http://drive.google.com",
-      "icon":"ion-ios-gear"
-   },
-   {
-      "type":"external",
-      "trans":"Campus Calendar",
-      "href":"https://calendar.google.com/calendar/embed?src=bmchscalendar%40gmail.com&ctz=America/Chicago",
-      "icon":"ion-ios-calendar"
-   },
-   {
-      "type":"internal",
-      "trans":"Counselor Corner",
-      "route":"public.pages.id({ id: 1653 })",
-      "icon":"ion-chatbubbles"
-   },
-   {
-      "type":"separator",
-      "trans":"Service Hours"
-   },
-   {
-      "type":"internal",
-      "trans":"Log Hours",
-      "route":"public.pages.id({ id: 216 })",
-      "icon":"ion-ios-calculator"
-   },
-   {
-      "type":"internal",
-      "trans":"View Hours",
-      "route":"public.pages.id({ id: 544 })",
-      "icon":"ion-ios-list"
-   },
-   {
-      "type":"separator",
-      "trans":"Campus Info"
-   },
-   {
-      "type":"folder",
-      "trans":"Faculty Directory",
-      "icon":"ion-ios-people",
-      "list":[
-         {
-            "type":"internal",
-            "trans":"Administration",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'administration', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Athletics",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'athletics', postType: 'post' })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Business Office",
-            "route":"public.taxonomies.slug({term: 'category', slug: 'business-office', postType: 'post' })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Cafeteria",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'cafeteria', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Campus Ministry",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'campus-ministry', postType: 'post' })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Advancement",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'advancement', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"English",
-            "route":"public.taxonomies.slug({term: 'category', slug: 'english', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Fine Arts",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'SLUG_HERE', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Guidance",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'guidance', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Maintenance",
-            "route":"public.taxonomies.slug({term: 'category', slug: 'maintenance', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Practical Studies",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'practical-studies', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"REACH",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'reach', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Science",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'science', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Social Studies",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'social-studies', postType: 'post' })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Technology",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'technology', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"Theology",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'theology', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"World Languages",
-            "route":"public.taxonomies.slug({ term: 'category', slug: 'world-languages', postType: 'post'  })",
-            "icon":"ion-person"
-         },
-         {
-            "type":"internal",
-            "trans":"All Faculty",
-            "route":"public.taxonomies({ term: 'category', slug: 'faculty-staff', postType: 'post' })",
-            "icon":"ion-person"
-         }
-      ]
-   },
-   {
-      "type":"separator",
-      "trans":"Contact Us"
-   },
-   {
-      "type":"internal",
-      "trans":"Contact Us",
-      "route":"public.pages.id({ id: 82 })",
-      "icon":"ion-ios-telephone"
-   },
-   {
-      "type":"internal",
-      "trans":"Location & Map",
-      "route":"public.pages.id({ id: 82 })",
-      "icon":"ion-ios-navigate"
-   },
-   {
-      "type":"internal",
-      "trans":" Saved",
-      "route":"public.bookmarks",
-      "icon":"ion-bookmark"
-   },
-   {
-      "type":"internal",
-      "trans":"Settings",
-      "route":"public.params",
-      "icon":"ion-ios-settings-strong"
-   },
-   {
-      "type":"internal",
-      "trans":"About BMCHS Connect",
-      "route":"public.pages.id({ id: 4319 })",
-      "icon":"ion-ios-information-outline"
-   }
-]
+[{
+    "type": "internal",
+    "trans": "menu.home",
+    "route": "public.posts",
+    "icon": "icon ion-home"
+}, {
+    "type": "separator",
+    "trans": "Posts type"
+}, {
+    "type": "folder",
+    "trans": "menu.posts",
+    "icon": "icon ion-ios-paper",
+    "list": [{
+        "type": "internal",
+        "trans": "Hello world",
+        "route": "public.posts.id({ id: 1 })",
+        "icon": "icon ion-android-document"
+    }, {
+        "type": "internal",
+        "trans": "All",
+        "route": "public.posts",
+        "icon": "icon ion-ios-paper"
+    }]
+}, {
+    "type": "folder",
+    "trans": "menu.pages",
+    "icon": "icon ion-android-document",
+    "list": [{
+        "type": "internal",
+        "trans": "Sample page",
+        "route": "public.pages.id({ id: 2592 })",
+        "icon": "icon ion-android-document"
+    }, {
+        "type": "internal",
+        "trans": "All",
+        "route": "public.pages",
+        "icon": "icon ion-android-document"
+    }]
+}, {
+    "type": "folder",
+    "trans": "menu.customPosts",
+    "icon": "icon ion-videocamera",
+    "list": [{
+        "type": "internal",
+        "trans": "La vie en rose",
+        "route": "public.customPosts.id({ id: 2498, slug: 'movie'})",
+        "icon": "icon ion-videocamera"
+    }, {
+        "type": "internal",
+        "trans": "All Movies",
+        "route": "public.customPosts({slug: 'movie'})",
+        "icon": "icon ion-videocamera"
+    }]
+}, {
+    "type": "separator",
+    "trans": "Taxonomies type"
+}, {
+    "type": "folder",
+    "trans": "menu.categories",
+    "icon": "icon ion-folder",
+    "list": [{
+        "type": "internal",
+        "trans": "Uncategorized",
+        "route": "public.taxonomies.slug({ term: 'category', slug: 'uncategorized', postType: 'post' })",
+        "icon": "icon ion-iphone"
+    }, {
+        "type": "internal",
+        "trans": "All",
+        "route": "public.taxonomies({ term: 'category', postType: 'post'})",
+        "icon": "icon ion-folder"
+    }]
+}, {
+    "type": "folder",
+    "trans": "menu.tags",
+    "icon": "icon ion-pricetags",
+    "list": [{
+        "type": "internal",
+        "trans": "AngularJS",
+        "route": "public.taxonomies.slug({ term: 'post_tag', slug: 'angularjs', postType: 'post' })",
+        "icon": "icon ion-iphone"
+    }, {
+        "type": "internal",
+        "trans": "All",
+        "route": "public.taxonomies({ term: 'post_tag', postType: 'post' })",
+        "icon": "icon ion-pricetags"
+    }]
+}, {
+    "type": "folder",
+    "trans": "menu.customTaxonomy",
+    "icon": "icon ion-ios-film",
+    "list": [{
+        "type": "internal",
+        "trans": "Audrey Tautou",
+        "route": "public.taxonomies.slug({ term: 'actor', slug: 'audrey-tautou', postType: 'movie' })",
+        "icon": "icon ion-ios-film"
+    },{
+        "type": "internal",
+        "trans": "Marion Cotillard",
+        "route": "public.taxonomies.slug({ term: 'actor', slug: 'marion-cotillard', postType: 'movie' })",
+        "icon": "icon ion-ios-film"
+    }, {
+        "type": "internal",
+        "trans": "All Actors",
+        "route": "public.taxonomies({ term: 'actor', postType: 'movie'})",
+        "icon": "icon ion-ios-film"
+    }]
+}, {
+    "type": "separator",
+    "trans": "Others"
+}, {
+    "type": "internal",
+    "trans": "menu.authors",
+    "route": "public.authors",
+    "icon": "icon ion-ios-people"
+}, {
+    "type": "internal",
+    "trans": "menu.bookmarks",
+    "route": "public.bookmarks",
+    "icon": "icon ion-bookmark"
+}, {
+    "type": "internal",
+    "trans": "params.title",
+    "route": "public.params",
+    "icon": "icon ion-gear-b"
+}, {
+    "type": "external",
+    "trans": "My blog (external link)",
+    "href": "http://julienrenaux.fr",
+    "icon": "icon ion-link"
+}, {
+    "type": "internal",
+    "trans": "About (page)",
+    "route": "public.pages.id({ id: 2596 })",
+    "icon": "icon ion-information"
+}]

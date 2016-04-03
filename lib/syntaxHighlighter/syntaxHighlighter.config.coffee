@@ -1,3 +1,3 @@
-module.exports = angular.module('wpbmchs.syntaxHighlighter')
-    .config ($WPBMCHSConfig, hljsServiceProvider) ->
-        hljsServiceProvider.setOptions $WPBMCHSConfig.syntaxHighlighter
+module.exports = angular.module('wordpress-hybrid-client.syntaxHighlighter')
+    .config ($WPHCConfig, hljsServiceProvider) ->
+        hljsServiceProvider.setOptions $WPHCConfig.syntaxHighlighter

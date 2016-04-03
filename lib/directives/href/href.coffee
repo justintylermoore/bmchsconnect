@@ -1,28 +1,28 @@
 ###
 @ngdoc directive
-@name bmchs: WPBMCHSHref
+@name wordpress - hybrid - client: wphcHref
 @restrict E
 @description
 modify href behavior
 ###
-module.exports = angular.module('wpbmchs.directives')
-    .directive 'WPBMCHSHrefInApp', () ->
+module.exports = angular.module('wordpress-hybrid-client.directives')
+    .directive 'wphcHrefInApp', () ->
         restrict: 'A'
-        controller: ($scope, $element, $attrs, $log, $ionicScrollDelegate, $WPBMCHSConfig) ->
-            target = _.get($WPBMCHSConfig, 'menu.externalLinkTarget') || '_system'
-            options = _.get($WPBMCHSConfig, 'menu.externalLinkOptions') || 'location=yes'
+        controller: ($scope, $element, $attrs, $log, $ionicScrollDelegate, $WPHCConfig) ->
+            target = _.get($WPHCConfig, 'menu.externalLinkTarget') || '_system'
+            options = _.get($WPHCConfig, 'menu.externalLinkOptions') || 'location=yes'
             $element.on 'click', (event) ->
                 event.preventDefault()
                 if _.get(window, 'cordova.InAppBrowser')
                     cordova.InAppBrowser.open $attrs.href, target, options
                 else
                     window.open $attrs.href, '_blank'
-    .directive 'WPBMCHSHref', () ->
+    .directive 'wphcHref', () ->
         restrict: 'A'
-        controller: ($scope, $element, $attrs, $log, $ionicScrollDelegate, $WPBMCHSConfig) ->
+        controller: ($scope, $element, $attrs, $log, $ionicScrollDelegate, $WPHCConfig) ->
             isAnchor = $attrs.href.lastIndexOf('#', 0) is 0
-            target = _.get($WPBMCHSConfig, 'menu.externalLinkTarget') || '_system'
-            options = _.get($WPBMCHSConfig, 'menu.externalLinkOptions') || 'location=yes'
+            target = _.get($WPHCConfig, 'menu.externalLinkTarget') || '_system'
+            options = _.get($WPHCConfig, 'menu.externalLinkOptions') || 'location=yes'
             if isAnchor
                 $element.on 'click', (event) ->
                     event.preventDefault()

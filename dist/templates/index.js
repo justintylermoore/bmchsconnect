@@ -1,4 +1,4 @@
-let mod = angular.module('wpbmchs.overwriteTemplates', []);
+let mod = angular.module('wordpress-hybrid-client.overwriteTemplates', []);
 
 mod.run(($templateCache) => {
     // customPosts

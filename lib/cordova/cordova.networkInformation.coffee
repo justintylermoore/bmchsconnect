@@ -1,5 +1,5 @@
-module.exports = angular.module 'wpbmchs.cordova'
-    .run ($log, $WPBMCHSConfig, $cordovaNetwork, $ionicPlatform) ->
+module.exports = angular.module 'wordpress-hybrid-client.cordova'
+    .run ($log, $WPHCConfig, $cordovaNetwork, $ionicPlatform) ->
         $log.info 'cordova network information'
 
         $ionicPlatform.ready () ->

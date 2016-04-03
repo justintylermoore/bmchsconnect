@@ -2,7 +2,7 @@
     <v-accordion>
         <div ng-repeat="item in ::menuCtrl.list track by $index">
             <v-pane ng-if="item.type == 'external'">
-                <v-pane-header WPBMCHS-href-in-app class="item" ng-class="::{'item-icon-left': item.icon}" menu-close target="_blank" ng-href="{{::item.href}}">
+                <v-pane-header wphc-href-in-app class="item" ng-class="::{'item-icon-left': item.icon}" menu-close target="_blank" ng-href="{{::item.href}}">
                     <i class="{{::item.icon}}" ng-if="::item.icon"></i> {{item.trans | translate}}
                 </v-pane-header>
                 <v-pane-content></v-pane-content>
@@ -24,7 +24,7 @@
                     <i class="{{::item.icon}}" ng-if="::item.icon"></i> {{item.trans | translate}}
                 </v-pane-header>
                 <v-pane-content>
-                    <WPBMCHS-menu ng-if="::item.list" list="item.list"></WPBMCHS-menu>
+                    <wphc-menu ng-if="::item.list" list="item.list"></wphc-menu>
                 </v-pane-content>
             </v-pane>
         </div>

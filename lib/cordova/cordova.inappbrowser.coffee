@@ -1,9 +1,8 @@
-module.exports = angular.module 'wpbmchs.cordova'
+module.exports = angular.module 'wordpress-hybrid-client.cordova'
     .config ($cordovaInAppBrowserProvider) ->
         defaultOptions =
             location: 'no',
             clearcache: 'no',
-            toolbar: 'no',
-            target: '_self'
+            toolbar: 'no'
 
         $cordovaInAppBrowserProvider.setDefaultOptions(defaultOptions)

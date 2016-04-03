@@ -1,5 +1,5 @@
 # Create namespace
-window.WPBMCHS = window.WPBMCHS || {}
+window.WPHC = window.WPHC || {}
 
 require 'ionic-sdk/release/js/ionic.bundle.js'
 require './angular-ios9-uiwebview.patch.js'
@@ -32,10 +32,10 @@ pushNotificationsModule = require './pushNotifications/index.js';
 # Style entry point
 require './scss/bootstrap'
 
-module.exports = app = angular.module 'wpbmchs', [
+module.exports = app = angular.module 'wordpress-hybrid-client', [
     'ionic'
     'ngIOS9UIWebViewPatch'
-    'wpbmchs.config'
+    'wordpress-hybrid-client.config'
     'ionic-native-transitions'
     'ui.router'
     'wp-api-angularjs'
@@ -72,12 +72,12 @@ app.config ($stateProvider, $urlRouterProvider) ->
     views:
         '@' :
             template: require "./views/ion-menu.html"
-            controller: "WPBMCHSMainController as main"
+            controller: "WPHCMainController as main"
 
     $urlRouterProvider.otherwise ($injector, $location) ->
-        $WPBMCHSConfig = $injector.get('$WPBMCHSConfig');
+        $WPHCConfig = $injector.get('$WPHCConfig');
         $state = $injector.get('$state');
-        $state.go _.get($WPBMCHSConfig, 'menu.defaultState.state'), _.get($WPBMCHSConfig, 'menu.defaultState.params')
+        $state.go _.get($WPHCConfig, 'menu.defaultState.state'), _.get($WPHCConfig, 'menu.defaultState.params')
 
 ###
 ANGULAR CONF
@@ -89,11 +89,11 @@ app.config ($logProvider, $compileProvider) ->
 ###
 NATIVE TRANSITIONS CONF
 ###
-app.config ($WPBMCHSConfig, $ionicNativeTransitionsProvider) ->
-    defaultOptions = _.get $WPBMCHSConfig, 'cordova.nativeTransitions.defaultOptions'
-    defaultTransition = _.get $WPBMCHSConfig, 'cordova.nativeTransitions.defaultTransition'
-    defaultBackTransition = _.get $WPBMCHSConfig, 'cordova.nativeTransitions.defaultBackTransition'
-    enabled = _.get $WPBMCHSConfig, 'cordova.nativeTransitions.enabled'
+app.config ($WPHCConfig, $ionicNativeTransitionsProvider) ->
+    defaultOptions = _.get $WPHCConfig, 'cordova.nativeTransitions.defaultOptions'
+    defaultTransition = _.get $WPHCConfig, 'cordova.nativeTransitions.defaultTransition'
+    defaultBackTransition = _.get $WPHCConfig, 'cordova.nativeTransitions.defaultBackTransition'
+    enabled = _.get $WPHCConfig, 'cordova.nativeTransitions.enabled'
     enabled = if _.isBoolean enabled then enabled else true
     $ionicNativeTransitionsProvider.setDefaultOptions defaultOptions if defaultOptions
     $ionicNativeTransitionsProvider.setDefaultTransition defaultTransition if defaultTransition
@@ -108,46 +108,46 @@ app.config require('./config/ionic.config.coffee');
 ###
 REST CONF
 ###
-app.config ($WPBMCHSConfig, WpApiProvider, $httpProvider) ->
+app.config ($WPHCConfig, WpApiProvider, $httpProvider) ->
     WpApiProvider.setDefaultHttpProperties
-        timeout: _.get($WPBMCHSConfig, 'api.timeout') || 5000
-    WpApiProvider.setBaseUrl _.get($WPBMCHSConfig, 'api.baseUrl') || null
+        timeout: _.get($WPHCConfig, 'api.timeout') || 5000
+    WpApiProvider.setBaseUrl _.get($WPHCConfig, 'api.baseUrl') || null
     $httpProvider.defaults.cache = false
-    $httpProvider.interceptors.push ($log, $q, $injector, $WPBMCHSConfig) ->
+    $httpProvider.interceptors.push ($log, $q, $injector, $WPHCConfig) ->
         request: (config) ->
-            if _.startsWith config.url, $WPBMCHSConfig.api.baseUrl
-                config.headers['Accept-Language'] = $injector.get('$WPBMCHSLanguage').getLocale()
+            if _.startsWith config.url, $WPHCConfig.api.baseUrl
+                config.headers['Accept-Language'] = $injector.get('$WPHCLanguage').getLocale()
             config || $q.resolve config
 
 ###
 CACHE CONF
 ###
-app.config ($WPBMCHSConfig, CacheFactoryProvider) ->
-    angular.extend(CacheFactoryProvider.defaults, _.get($WPBMCHSConfig, 'cache.data') || {})
+app.config ($WPHCConfig, CacheFactoryProvider) ->
+    angular.extend(CacheFactoryProvider.defaults, _.get($WPHCConfig, 'cache.data') || {})
 
 ###
 MEMORY STATS CONF
 ###
-app.config ($WPBMCHSConfig, $compileProvider) ->
+app.config ($WPHCConfig, $compileProvider) ->
     $compileProvider.debugInfoEnabled if IS_PROD then false else true
 
 ###
 MAIN CONTROLLER
 ###
-app.controller 'WPBMCHSMainController' , ($log, $WPBMCHSConfig) ->
+app.controller 'WPHCMainController' , ($log, $WPHCConfig) ->
     $log.info 'main controller'
 
     vm = @
-    vm.exposeAsideWhen = _.get($WPBMCHSConfig, 'menu.exposeAsideWhen') || 'large'
-    vm.appVersion = wpbmchs.version || null
-    vm.appConfig = $WPBMCHSConfig
+    vm.exposeAsideWhen = _.get($WPHCConfig, 'menu.exposeAsideWhen') || 'large'
+    vm.appVersion = wordpressHybridClient.version || null
+    vm.appConfig = $WPHCConfig
     vm.appTitle = vm.appConfig.title || null
     vm
 
 ###
 RUN
 ###
-app.run ($rootScope, $log, $WPBMCHSConfig, $translate, $document, $WPBMCHSLanguage, $ionicPlatform, $WPBMCHSAccessibility, $cordovaSplashscreen, $WPBMCHSInit) ->
+app.run ($rootScope, $log, $WPHCConfig, $translate, $document, $WPHCLanguage, $ionicPlatform, $WPHCAccessibility, $cordovaSplashscreen, $WPHCInit) ->
     'ngInject';
     $rootScope.appLoaded = undefined
     stateChangeTimeout = null
@@ -158,7 +158,7 @@ app.run ($rootScope, $log, $WPBMCHSConfig, $translate, $document, $WPBMCHSLangua
         $rootScope.$on '$stateChangeError', (event, toState, toParams, fromState, fromParams, error) ->
             $log.info '$stateChangeError', error
 
-    $WPBMCHSAccessibility.updateBodyClass()
+    $WPHCAccessibility.updateBodyClass()
     
     $rootScope.$on '$stateChangeSuccess', (event, toState, toParams, fromState, fromParams) ->
         $log.debug 'stateChangeSuccess', toState, toParams, fromState, fromParams
@@ -171,11 +171,11 @@ app.run ($rootScope, $log, $WPBMCHSConfig, $translate, $document, $WPBMCHSLangua
         $document.find('html').addClass _.kebabCase(toStateClass)
 
     $ionicPlatform.ready () ->
-        $WPBMCHSInit.init().finally ()->
+        $WPHCInit.init().finally ()->
             $rootScope.appLoaded = true;
             # For web debug
             if !ionic.Platform.isWebView()
-                $translate.use $WPBMCHSLanguage.getLocale()
+                $translate.use $WPHCLanguage.getLocale()
             else
                 $cordovaSplashscreen.hide()
 

@@ -1,14 +1,14 @@
-module.exports = angular.module 'wpbmchs.analytics'
-    .config ($WPBMCHSConfig, $analyticsProvider) ->
-        if !$WPBMCHSConfig.analytics.enabled or !$WPBMCHSConfig.analytics.trackingId
+module.exports = angular.module 'wordpress-hybrid-client.analytics'
+    .config ($WPHCConfig, $analyticsProvider) ->
+        if !$WPHCConfig.analytics.enabled or !$WPHCConfig.analytics.trackingId
             return
 
         if (!IS_PROD)
             $analyticsProvider.developerMode true
-        $analyticsProvider.virtualPageviews $WPBMCHSConfig.analytics.virtualPageTracking
+        $analyticsProvider.virtualPageviews $WPHCConfig.analytics.virtualPageTracking
 
-    .run ($WPBMCHSConfig) ->
-        if !$WPBMCHSConfig.analytics.enabled or !$WPBMCHSConfig.analytics.trackingId
+    .run ($WPHCConfig) ->
+        if !$WPHCConfig.analytics.enabled or !$WPHCConfig.analytics.trackingId
             return
 
         ((i, s, o, g, r, a, m) ->
@@ -25,5 +25,5 @@ module.exports = angular.module 'wpbmchs.analytics'
             return
         ) window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'
 
-        window.ga 'create', $WPBMCHSConfig.analytics.trackingId, 'auto'
-        window.ga 'set', '&uid', $WPBMCHSConfig.analytics.userId
+        window.ga 'create', $WPHCConfig.analytics.trackingId, 'auto'
+        window.ga 'set', '&uid', $WPHCConfig.analytics.userId

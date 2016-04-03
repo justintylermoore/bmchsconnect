@@ -1,5 +1,5 @@
-module.exports = angular.module 'wpbmchs.cacheImg'
-    .service '$WPBMCHSCacheImg', ($q, $WPBMCHSConfig, $log) ->
+module.exports = angular.module 'wordpress-hybrid-client.cacheImg'
+    .service '$WPHCCacheImg', ($q, $WPHCConfig, $log) ->
         initialised = false
         init: ->
             if initialised
@@ -7,13 +7,13 @@ module.exports = angular.module 'wpbmchs.cacheImg'
             deferred = $q.defer()
             $log.debug 'ImgCache initialising'
             ImgCache.options.debug = if IS_PROD then false else true
-            ImgCache.options.chromeQuota = $WPBMCHSConfig.cache.img.chromeQuota;
-            ImgCache.options.localCacheFolder = $WPBMCHSConfig.cache.img.localCacheFolder;
-            ImgCache.options.useDataURI = $WPBMCHSConfig.cache.img.useDataURI;
-            ImgCache.options.usePersistentCache = $WPBMCHSConfig.cache.img.usePersistentCache;
-            ImgCache.options.cacheClearSize = $WPBMCHSConfig.cache.img.cacheClearSize;
-            ImgCache.options.headers = $WPBMCHSConfig.cache.img.headers;
-            ImgCache.options.skipURIencoding = $WPBMCHSConfig.cache.img.skipURIencoding;
+            ImgCache.options.chromeQuota = $WPHCConfig.cache.img.chromeQuota;
+            ImgCache.options.localCacheFolder = $WPHCConfig.cache.img.localCacheFolder;
+            ImgCache.options.useDataURI = $WPHCConfig.cache.img.useDataURI;
+            ImgCache.options.usePersistentCache = $WPHCConfig.cache.img.usePersistentCache;
+            ImgCache.options.cacheClearSize = $WPHCConfig.cache.img.cacheClearSize;
+            ImgCache.options.headers = $WPHCConfig.cache.img.headers;
+            ImgCache.options.skipURIencoding = $WPHCConfig.cache.img.skipURIencoding;
             ImgCache.init ->
                 $log.info 'ImgCache init: success!'
                 deferred.resolve()

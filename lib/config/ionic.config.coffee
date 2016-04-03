@@ -1,20 +1,20 @@
-module.exports = ($WPBMCHSConfig, $ionicConfigProvider) ->
+module.exports = ($WPHCConfig, $ionicConfigProvider) ->
     'ngInject';
-    viewsTransition = _.get $WPBMCHSConfig, 'ionicConfig.views.transition'
-    viewsMaxCache = _.get $WPBMCHSConfig, 'ionicConfig.views.maxCache'
-    viewsForwardCache = _.get $WPBMCHSConfig, 'ionicConfig.views.forwardCache'
-    scrollingJsScrolling = _.get $WPBMCHSConfig, 'ionicConfig.scrolling.jsScrolling'
-    backButtonIcon = _.get $WPBMCHSConfig, 'ionicConfig.backButton.icon'
-    backButtonPreviousTitleText = _.get $WPBMCHSConfig, 'ionicConfig.backButton.previousTitleText'
-    formCheckbox = _.get $WPBMCHSConfig, 'ionicConfig.form.checkbox'
-    formToggle = _.get $WPBMCHSConfig, 'ionicConfig.form.toggle'
-    spinnerIcon = _.get $WPBMCHSConfig, 'ionicConfig.spinner.icon'
-    tabsStyle = _.get $WPBMCHSConfig, 'ionicConfig.tabs.style'
-    tabsPosition = _.get $WPBMCHSConfig, 'ionicConfig.tabs.position'
-    templatesMaxPrefetch = _.get $WPBMCHSConfig, 'ionicConfig.templates.maxPrefetch'
-    navBarAlignTitle = _.get $WPBMCHSConfig, 'ionicConfig.navBar.alignTitle'
-    navBarPositionPrimaryButtons = _.get $WPBMCHSConfig, 'ionicConfig.navBar.positionPrimaryButtons'
-    navBarPositionSecondaryButtons = _.get $WPBMCHSConfig, 'ionicConfig.navBar.positionSecondaryButtons'
+    viewsTransition = _.get $WPHCConfig, 'ionicConfig.views.transition'
+    viewsMaxCache = _.get $WPHCConfig, 'ionicConfig.views.maxCache'
+    viewsForwardCache = _.get $WPHCConfig, 'ionicConfig.views.forwardCache'
+    scrollingJsScrolling = _.get $WPHCConfig, 'ionicConfig.scrolling.jsScrolling'
+    backButtonIcon = _.get $WPHCConfig, 'ionicConfig.backButton.icon'
+    backButtonPreviousTitleText = _.get $WPHCConfig, 'ionicConfig.backButton.previousTitleText'
+    formCheckbox = _.get $WPHCConfig, 'ionicConfig.form.checkbox'
+    formToggle = _.get $WPHCConfig, 'ionicConfig.form.toggle'
+    spinnerIcon = _.get $WPHCConfig, 'ionicConfig.spinner.icon'
+    tabsStyle = _.get $WPHCConfig, 'ionicConfig.tabs.style'
+    tabsPosition = _.get $WPHCConfig, 'ionicConfig.tabs.position'
+    templatesMaxPrefetch = _.get $WPHCConfig, 'ionicConfig.templates.maxPrefetch'
+    navBarAlignTitle = _.get $WPHCConfig, 'ionicConfig.navBar.alignTitle'
+    navBarPositionPrimaryButtons = _.get $WPHCConfig, 'ionicConfig.navBar.positionPrimaryButtons'
+    navBarPositionSecondaryButtons = _.get $WPHCConfig, 'ionicConfig.navBar.positionSecondaryButtons'
 
     $ionicConfigProvider.views.transition viewsTransition if _.isString viewsTransition
     $ionicConfigProvider.views.maxCache viewsMaxCache if _.isNumber viewsMaxCache

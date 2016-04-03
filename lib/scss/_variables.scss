@@ -1,33 +1,13 @@
 // http://www.materialpalette.com/blue-grey/teal
-$palette-primary-dark: #0e9322 !default;
-$palette-primary-color: #0e9322 !default;
+$palette-primary-dark: #455a64 !default;
+$palette-primary-color: #607d8b !default;
 $palette-primary-light: #cfd8dc !default;
 $palette-primary-icon: #fff !default;
-$palette-primary-text: #fff !default;
-$palette-primary-background: #333333 !default;
-$palette-accent-color: #0e9322 !default;
-$palette-secondary-text: #0e9322 !default;
-$palette-divider-color: #0e9322 !default;
-
-
-// JTMs Overwrites
-$item-divider-bg:                 #333333 !default;
-$item-divider-color:              #ffffff !default;
-$item-divider-padding:            5px 15px !default;
-
-$bg-page-list: ;
-
-$list-background-color:	#242424;
-
-$card-ios-text-color:	#ffffff;
-$card-ios-title-text-color: #ffffff;
-
-$item-text-wrap: #ffffff ;
-
-$card-wp-text-color:	#ffffff;
-$list-ios-header-color:	#fff;
-
-$card-wp-title-text-color:	#ffffff;
+$palette-primary-text: #212121 !default;
+$palette-primary-background: white !default;
+$palette-accent-color: #009688 !default;
+$palette-secondary-text: #727272 !default;
+$palette-divider-color: #eaeaea !default;
 
 // Ionic palette match
 $light: $palette-primary-icon;
@@ -42,22 +22,22 @@ $positive: $palette-primary-color;
 // ------------------------------
 $base-background-color: $palette-primary-background;
 $base-color: $palette-primary-text;
-$font-family-sans-serif: "OpenSans", "Helvetica Neue", "Segoe UI", sans-serif !default;
+$font-family-sans-serif: "Roboto", "Helvetica Neue", "Segoe UI", sans-serif !default;
 
 // 20/14
 // ------------------------------
 $item-default-bg: $palette-primary-background;
 $item-default-border: $palette-divider-color;
-$item-default-text: #ffffff;
+$item-default-text: $palette-primary-text;
 
 // Grays
 // ------------------------------
-$gray-base: #666666 !default;
-$gray-darker: #222222 !default;
-$gray-dark: #555555 !default;
-$gray: #888888 !default;
-$gray-light: #DBDBDB!default;
-$gray-lighter: #E8E8E8 !default;
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default;
+$gray-dark: lighten($gray-base, 20%) !default;
+$gray: lighten($gray-base, 33.5%) !default;
+$gray-light: lighten($gray-base, 46.7%) !default;
+$gray-lighter: lighten($gray-base, 93.5%) !default;
 $bar-height: 64px !default;
 $bar-padding-portrait: 10px !default;
 
@@ -85,7 +65,7 @@ $emptyList-zIndex: 1001 !default;
 // Post
 // ------------------------------
 $post-title-size: 24px !default;
-$post-title-color: #ffffff;
+$post-title-color: $base-color;
 $post-img-height: 200px !default;
 $post-img-bg: white !default;
 $post-img-title-size: $post-title-size;
@@ -104,17 +84,17 @@ $layout-gutter-width: ($baseline-grid * 2) !default;
 // Code
 // ------------------------------
 $code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$code-color: #E8E8E8 !default;
-$code-bg: #333333 !default;
-$pre-bg: #555555 !default;
+$code-color: #c7254e !default;
+$code-bg: #f9f2f4 !default;
+$pre-bg: #f5f5f5 !default;
 $pre-color: $gray-dark !default;
-$pre-border-color: #E8E8E8 !default;
+$pre-border-color: #ccc !default;
 $pre-scrollable-max-height: 340px !default;
 
 // Menu
 // -------------------------------
-$menu-icon-color: #ffffff;
-$menu-starting-bg-color: #333333 !default;
+$menu-icon-color: $balanced;
+$menu-starting-bg-color: white !default;
 $menu-starting-darken-amount: 4% !default;
 $menu-icon-level-color: lighten($menu-icon-color, 10%) !default;
 $menu-max-depth: 6 !default;

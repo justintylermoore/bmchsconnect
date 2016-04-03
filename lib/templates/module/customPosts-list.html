@@ -1,10 +1,10 @@
 <ion-view>
     <ion-nav-title  ng-bind-html="customPostsCtrl.title | translate"></ion-nav-title>
     <ion-content class="padding bg-gray-lighter">
-        <WPBMCHS-empty-list list="customPostsCtrl.list"></WPBMCHS-empty-list>
-        <WPBMCHS-loader ng-if="!customPostsCtrl.list" on-load="customPostsCtrl.init()"></WPBMCHS-loader>
+        <wphc-empty-list list="customPostsCtrl.list"></wphc-empty-list>
+        <wphc-loader ng-if="!customPostsCtrl.list" on-load="customPostsCtrl.init()"></wphc-loader>
         <ion-refresher pulling-text="{{ 'pullToRefresh' | translate}}" on-refresh="customPostsCtrl.refresh()"></ion-refresher>
-        <WPBMCHS-custom-posts-list list="customPostsCtrl.list" type="{{customPostsCtrl.postType}}"></WPBMCHS-custom-posts-list>
+        <wphc-custom-posts-list list="customPostsCtrl.list" type="{{customPostsCtrl.postType}}"></wphc-custom-posts-list>
         <ion-infinite-scroll immediate-check="true" ng-if="customPostsCtrl.list && !customPostsCtrl.isPaginationOver" on-infinite="customPostsCtrl.loadMore()" distance="1%">test</ion-infinite-scroll>
     </ion-content>
 </ion-view>

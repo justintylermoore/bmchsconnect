@@ -1,5 +1,5 @@
-module.exports = angular.module 'wpbmchs.cordova'
-    .factory '$WPBMCHSSocialSharing', ($log, $WPBMCHSConfig, $ionicPlatform, $cordovaSocialSharing, $cordovaToast, $filter, $window) ->
+module.exports = angular.module 'wordpress-hybrid-client.cordova'
+    .factory '$WPHCSocialSharing', ($log, $WPHCConfig, $ionicPlatform, $cordovaSocialSharing, $cordovaToast, $filter, $window) ->
         $log.info 'cordova socialsharing'
 
         share: (platform, title, link) ->

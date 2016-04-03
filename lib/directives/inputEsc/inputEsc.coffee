@@ -1,6 +1,6 @@
 ###
 @ngdoc directive
-@name wordpress - hybrid - client: WPBMCHSInputEsc
+@name wordpress - hybrid - client: wphcInputEsc
 @restrict E
 @description
 Blur input on Esc
@@ -8,7 +8,7 @@ Blur input on Esc
                     < pre >
 </pre >
 ###
-module.exports = angular.module('wpbmchs.directives').directive 'WPBMCHSInputEsc', ->
+module.exports = angular.module('wordpress-hybrid-client.directives').directive 'wphcInputEsc', ->
     restrict: 'A'
     link: (scope, elem, attrs) ->
         ESCAPE_KEY = 27
