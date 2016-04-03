@@ -1,6 +1,6 @@
 import templates from './templates/index.js';
 
-let mod = angular.module('wordpress-hybrid-client.overwriteModule', [
+let mod = angular.module('wpbmchs.overwriteModule', [
     templates
 ]);
 

@@ -1,4 +1,4 @@
-module.exports = angular.module 'wordpress-hybrid-client.cacheImg'
+module.exports = angular.module 'wpbmchs.cacheImg'
     .service '$WPBMCHSCacheImg', ($q, $WPBMCHSConfig, $log) ->
         initialised = false
         init: ->

@@ -1,12 +1,122 @@
 // http://www.materialpalette.com/blue-grey/teal
-// Here you can also overwrite ionic's variables
-$palette-primary-dark: #455a64 !default;
-$palette-primary-color: #607d8b !default;
+$palette-primary-dark: #0e9322 !default;
+$palette-primary-color: #0e9322 !default;
 $palette-primary-light: #cfd8dc !default;
 $palette-primary-icon: #fff !default;
-$palette-primary-text: #212121 !default;;
-$palette-primary-background: white !default;
-$palette-accent-color: #009688 !default;
-$palette-secondary-text: #727272 !default;
-$palette-divider-color: #EAEAEA !default;
+$palette-primary-text: #fff !default;
+$palette-primary-background: #333333 !default;
+$palette-accent-color: #0e9322 !default;
+$palette-secondary-text: #0e9322 !default;
+$palette-divider-color: #0e9322 !default;
+
+
+// JTMs Overwrites
+$item-divider-bg:                 #333333 !default;
+$item-divider-color:              #ffffff !default;
+$item-divider-padding:            5px 15px !default;
+
+$bg-page-list: ;
+
+$list-background-color:	#242424;
+
+$card-ios-text-color:	#ffffff;
+$card-ios-title-text-color: #ffffff;
+
+$item-text-wrap: #ffffff ;
+
+$card-wp-text-color:	#ffffff;
+$list-ios-header-color:	#fff;
+
+$card-wp-title-text-color:	#ffffff;
+
+// Ionic palette match
+$light: $palette-primary-icon;
+$stable: $palette-divider-color;
+$calm: $palette-primary-light;
+$energized: $palette-accent-color;
+$balanced: $palette-secondary-text;
+$dark: $palette-primary-dark;
+$positive: $palette-primary-color;
+
+// Base
+// ------------------------------
+$base-background-color: $palette-primary-background;
+$base-color: $palette-primary-text;
+$font-family-sans-serif: "OpenSans", "Helvetica Neue", "Segoe UI", sans-serif !default;
+
+// 20/14
+// ------------------------------
+$item-default-bg: $palette-primary-background;
+$item-default-border: $palette-divider-color;
+$item-default-text: #ffffff;
+
+// Grays
+// ------------------------------
+$gray-base: #666666 !default;
+$gray-darker: #222222 !default;
+$gray-dark: #555555 !default;
+$gray: #888888 !default;
+$gray-light: #DBDBDB!default;
+$gray-lighter: #E8E8E8 !default;
 $bar-height: 64px !default;
+$bar-padding-portrait: 10px !default;
+
+// Custom break point
+$grid-responsive-xl-break: 1450px !default;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../../node_modules/ionic-sdk/release/fonts" !default;
+$font-family-base: inherit;
+
+// Loader
+// ------------------------------
+$loader-width: 50px !default;
+$loader-height: 50px !default;
+$loader-zIndex: 1002 !default;
+$loader-bg: $gray-lighter;
+$loader-stroke: $positive;
+$loader-fill: $positive;
+
+// Empty list directive
+// ----------------------
+$emptyList-bg: $gray-lighter;
+$emptyList-zIndex: 1001 !default;
+
+// Post
+// ------------------------------
+$post-title-size: 24px !default;
+$post-title-color: #ffffff;
+$post-img-height: 200px !default;
+$post-img-bg: white !default;
+$post-img-title-size: $post-title-size;
+$post-img-title-padding: 20px !default;
+$post-img-title-color: white !default;
+$post-img-title-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !default;
+
+// Layout
+// ------------------------------
+$baseline-grid: 8px !default;
+$layout-breakpoint-sm: 600px !default;
+$layout-breakpoint-md: 960px !default;
+$layout-breakpoint-lg: 1200px !default;
+$layout-gutter-width: ($baseline-grid * 2) !default;
+
+// Code
+// ------------------------------
+$code-font-family: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$code-color: #E8E8E8 !default;
+$code-bg: #333333 !default;
+$pre-bg: #555555 !default;
+$pre-color: $gray-dark !default;
+$pre-border-color: #E8E8E8 !default;
+$pre-scrollable-max-height: 340px !default;
+
+// Menu
+// -------------------------------
+$menu-icon-color: #ffffff;
+$menu-starting-bg-color: #333333 !default;
+$menu-starting-darken-amount: 4% !default;
+$menu-icon-level-color: lighten($menu-icon-color, 10%) !default;
+$menu-max-depth: 6 !default;
+$menu-pane-expand-duration: 0.25s !default;
+$menu-pane-hover-duration: 0.25s !default;

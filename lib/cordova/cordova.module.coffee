@@ -1,6 +1,6 @@
 require 'ng-cordova'
 
-module.exports = app = angular.module 'wordpress-hybrid-client.cordova', [
+module.exports = app = angular.module 'wpbmchs.cordova', [
     require('../config').name
     'ngCordova'
 ]

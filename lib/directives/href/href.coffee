@@ -1,11 +1,11 @@
 ###
 @ngdoc directive
-@name wordpress - hybrid - client: WPBMCHSHref
+@name bmchs: WPBMCHSHref
 @restrict E
 @description
 modify href behavior
 ###
-module.exports = angular.module('wordpress-hybrid-client.directives')
+module.exports = angular.module('wpbmchs.directives')
     .directive 'WPBMCHSHrefInApp', () ->
         restrict: 'A'
         controller: ($scope, $element, $attrs, $log, $ionicScrollDelegate, $WPBMCHSConfig) ->

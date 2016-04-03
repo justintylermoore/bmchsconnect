@@ -1,4 +1,4 @@
-module.exports = angular.module 'wordpress-hybrid-client.analytics'
+module.exports = angular.module 'wpbmchs.analytics'
     .config ($WPBMCHSConfig, $analyticsProvider) ->
         if !$WPBMCHSConfig.analytics.enabled or !$WPBMCHSConfig.analytics.trackingId
             return

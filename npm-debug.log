@@ -1,0 +1,46 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'installWPBMCHS' ]
+2 info using npm@3.3.12
+3 info using node@v4.4.2
+4 verbose run-script [ 'preinstallWPBMCHS', 'installWPBMCHS', 'postinstallWPBMCHS' ]
+5 info lifecycle wpbmchs@1.0.1~preinstallWPBMCHS: wpbmchs@1.0.1
+6 silly lifecycle wpbmchs@1.0.1~preinstallWPBMCHS: no script for preinstallWPBMCHS, continuing
+7 info lifecycle wpbmchs@1.0.1~installWPBMCHS: wpbmchs@1.0.1
+8 verbose lifecycle wpbmchs@1.0.1~installWPBMCHS: unsafe-perm in lifecycle true
+9 verbose lifecycle wpbmchs@1.0.1~installWPBMCHS: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jtm/Desktop/ionic-apps/wpbmchs/node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+10 verbose lifecycle wpbmchs@1.0.1~installWPBMCHS: CWD: /Users/jtm/Desktop/ionic-apps/wpbmchs
+11 silly lifecycle wpbmchs@1.0.1~installWPBMCHS: Args: [ '-c', 'cd scripts && node ./install.js' ]
+12 silly lifecycle wpbmchs@1.0.1~installWPBMCHS: Returned: code: 1  signal: null
+13 info lifecycle wpbmchs@1.0.1~installWPBMCHS: Failed to exec installWPBMCHS script
+14 verbose stack Error: wpbmchs@1.0.1 installWPBMCHS: `cd scripts && node ./install.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:232:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:827:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid wpbmchs@1.0.1
+16 verbose cwd /Users/jtm/Desktop/ionic-apps/wpbmchs
+17 error Darwin 15.4.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "installWPBMCHS"
+19 error node v4.4.2
+20 error npm  v3.3.12
+21 error code ELIFECYCLE
+22 error wpbmchs@1.0.1 installWPBMCHS: `cd scripts && node ./install.js`
+22 error Exit status 1
+23 error Failed at the wpbmchs@1.0.1 installWPBMCHS script 'cd scripts && node ./install.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the wpbmchs package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     cd scripts && node ./install.js
+23 error You can get their info via:
+23 error     npm owner ls wpbmchs
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

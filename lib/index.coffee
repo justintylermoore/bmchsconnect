@@ -32,10 +32,10 @@ pushNotificationsModule = require './pushNotifications/index.js';
 # Style entry point
 require './scss/bootstrap'
 
-module.exports = app = angular.module 'wordpress-hybrid-client', [
+module.exports = app = angular.module 'wpbmchs', [
     'ionic'
     'ngIOS9UIWebViewPatch'
-    'wordpress-hybrid-client.config'
+    'wpbmchs.config'
     'ionic-native-transitions'
     'ui.router'
     'wp-api-angularjs'
@@ -139,7 +139,7 @@ app.controller 'WPBMCHSMainController' , ($log, $WPBMCHSConfig) ->
 
     vm = @
     vm.exposeAsideWhen = _.get($WPBMCHSConfig, 'menu.exposeAsideWhen') || 'large'
-    vm.appVersion = wordpressHybridClient.version || null
+    vm.appVersion = wpbmchs.version || null
     vm.appConfig = $WPBMCHSConfig
     vm.appTitle = vm.appConfig.title || null
     vm

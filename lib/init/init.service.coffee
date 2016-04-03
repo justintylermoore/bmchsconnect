@@ -1,4 +1,4 @@
-module.exports = angular.module 'wordpress-hybrid-client.init'
+module.exports = angular.module 'wpbmchs.init'
     .service '$WPBMCHSInit', ($q, $WPBMCHSConfig, $log, $WPBMCHSCacheImg) ->
         init: ->
             promises = []

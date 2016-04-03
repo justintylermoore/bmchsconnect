@@ -1,4 +1,4 @@
-module.exports = angular.module 'wordpress-hybrid-client.cordova'
+module.exports = angular.module 'wpbmchs.cordova'
     .config ($cordovaAppRateProvider, $WPBMCHSConfig) ->
         if !_.get $WPBMCHSConfig, 'cordova.appRate.enabled'
             return

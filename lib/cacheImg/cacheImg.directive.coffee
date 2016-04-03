@@ -1,4 +1,4 @@
-module.exports = angular.module 'wordpress-hybrid-client.cacheImg'
+module.exports = angular.module 'wpbmchs.cacheImg'
     .directive 'WPBMCHSImgCache', ->
         restrict: 'A'
         link: (scope, el, attrs) ->

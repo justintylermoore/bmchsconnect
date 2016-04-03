@@ -1,4 +1,4 @@
-module.exports = angular.module 'wordpress-hybrid-client.cordova'
+module.exports = angular.module 'wpbmchs.cordova'
     .run ($log, $WPBMCHSConfig, $cordovaStatusbar, $ionicPlatform) ->
         $log.info 'cordova statusbar'
 
